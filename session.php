@@ -1,8 +1,9 @@
 <?php
 session_start(); // Start the session
 
-// Ensure the user is logged in, otherwise redirect to the login page
+// Debugging line: Check if the session email is set
 if (!isset($_SESSION["email"])) {
+    echo "Session email is not set!";  // Debugging message
     header("Location: login.php");
     exit();
 }
